@@ -6,7 +6,9 @@ const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers]
 const createFareMultiplier = (fare) => {return function(multiplier) {return fare * multiplier}}
 const fareDoubler = createFareMultiplier(2)
 const fareTripler = createFareMultiplier(3)
-const selectDifferentDrivers = function selectDifferentDrivers(){
+const selectDifferentDrivers = (drivers, someFunction) => someFunction (drivers)
+
+/*function() {
     let selectedDrivers 
     if(Math.random() > 0.5){
         selectedDrivers = selectingDrivers[0]()
@@ -14,4 +16,4 @@ const selectDifferentDrivers = function selectDifferentDrivers(){
         selectedDrivers = selectingDrivers[1]()
     }
     return selectedDrivers
-} 
+} */
